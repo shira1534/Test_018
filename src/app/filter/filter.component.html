@@ -1,0 +1,41 @@
+<div class="wrapper">
+     <mat-form-field class="text-center" appearance="fill">
+        <mat-label>שם</mat-label>
+        <mat-select required [(ngModel)]="nameSelect">
+            <mat-option *ngFor="let name of names" [value]="name">
+                {{name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> 
+
+
+    
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>קטגוריה</mat-label>
+        <mat-select [(ngModel)]="categorySelect">
+            <mat-option *ngFor="let c of categories" [value]="c">
+                {{c}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field> 
+
+
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>טווח מחירים</mat-label>
+        <mat-select [(ngModel)]="priceSelect">
+            <mat-option *ngFor="let price of prices" [value]="price.value">
+                {{price.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+
+    <div class="search">
+        <button class="home-btn" (click)="searchFilter()">אני מחפש...</button>
+    </div>
+</div>

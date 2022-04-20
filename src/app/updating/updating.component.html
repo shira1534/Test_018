@@ -1,0 +1,44 @@
+
+<h1 class="divup"> עדכון בגד </h1>
+
+<div class="wrraper">
+  <div class="right"></div>
+  <div class="wrraper-form">
+    <form>
+      <mat-form-field class="name-zimmer" appearance="fill">
+        <mat-label>שם בגד </mat-label>
+        <input matInput [(ngModel)]="showenproduct.productName" name="ProductName">
+      </mat-form-field>
+
+      <mat-form-field class="num-Beds" appearance="fill">
+        <mat-label>מחיר</mat-label>
+        <input matInput [(ngModel)]="showenproduct.price" name="Price">
+
+      </mat-form-field>
+
+      <mat-form-field class="num-Beds" appearance="fill">
+        <mat-label>מספר במלאי</mat-label>
+        <input matInput [(ngModel)]="showenproduct.unitsInStock" name="UnitsInStock">
+
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>קטגוריה</mat-label>
+        <input matInput [(ngModel)]="showenproduct.category" name="Category">
+
+      </mat-form-field>
+     
+      <!-- <input type='file' (change)="onSelectFile($event)">
+      <img *ngFor="let img of url" [src]="img" height="200"> <br /> -->
+      
+      <input type="button"   class="submit" (click)="save()"  value="שמירה">
+
+      
+
+    
+    </form>
+  </div>
+</div>
+
+
+

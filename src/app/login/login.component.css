@@ -1,0 +1,36 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+.example-right-align {
+    text-align: right;
+}
+input.example-right-align {
+    -moz-appearance: textfield;
+}
+input.example-right-align::-webkit-outer-spin-button {
+    display: none;
+}
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+.login {
+    text-align: center;
+}
+.login1 {
+    background-color: #6fffc2;
+    border: none;
+    color: purple;
+    border-radius: 20px;
+    width: 10vw;
+    height: 25px;
+    margin-top: 10px;
+}
+.login1:hover {
+    background-color: #55fdb7;
+}
+.mat-form-field-appearance-fill{
+    text-align: center !important;
+}

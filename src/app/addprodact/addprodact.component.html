@@ -1,0 +1,41 @@
+<h1 class="divup"> בגד חדש </h1>
+
+<div class="wrraper">
+  <div class="right"></div>
+  <div class="wrraper-form">
+    <form>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>שם מוצר </mat-label>
+        <input matInput [(ngModel)]="newcloth.ProductName" name="name">
+      </mat-form-field>
+
+      
+      <mat-form-field class="half-width" appearance="fill">
+        <mat-label>מחיר </mat-label>
+        <input matInput [(ngModel)]="newcloth.price" name="Price">
+      </mat-form-field>
+
+
+      <mat-form-field class="half-width" appearance="fill">
+        <mat-label>מספר במלאי</mat-label>
+        <input matInput [(ngModel)]="newcloth.unitsInStock" name="UnitsInStock">
+      </mat-form-field>
+
+      <mat-form-field class="space-left half-width" appearance="fill">
+        <mat-label>קטגוריה</mat-label>
+        <input matInput [(ngModel)]="newcloth.category" name="namecategory">
+
+      </mat-form-field>
+     
+      <!-- <input type='file' (change)="onSelectFile($event)" name="file">
+      <img *ngFor="let img of url" [src]="img" height="200"> <br /> -->
+
+
+      <div>
+        <button type="submit" class="submit" (click)="savecloth()">שמור</button>
+        <input type="reset" value="הוסף מוצר חדש" class="clear" name="reset">
+
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="login">
+  <!-- ng-submit="register()" -->
+    <form  class="example-form">
+     
+            <mat-form-field class="space-left example-full-width" appearance="fill">
+              <mat-label>שם משתמש </mat-label>
+              <input matInput [(ngModel)]="newuser.userName" name="firstname">
+            </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>טלפון</mat-label>
+          <input [(ngModel)]="newuser.phone" matInput type="tel" id="phone" name="phone">
+        </mat-form-field>
+
+        <tr>
+            <mat-form-field class="space-left example-full-wi" appearance="fill">
+              <mat-label>כתובת מייל</mat-label>
+              <input matInput type="email" id="email" required [(ngModel)]="newuser.mail" name="mail"
+                placeholder="pat@example.com" [formControl]="email">
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>סיסמה</mat-label>
+              <input matInput  type="password" id="pass" name="password" minlength="8" required
+                [(ngModel)]="newuser.password" >
+                
+  
+            </mat-form-field>
+            <mat-form-field class="full-width example-full-width" appearance="fill">
+              <mat-label>אימות סיסמה </mat-label>
+              <input matInput pattern="[1-9]\d*"  type="password" id="pass" name="password" minlength="8" required
+                [(ngModel)]="checkPassword">
+              <mat-error *ngIf="checkPassword!=newuser.password">אימות סיסמה לא תקין</mat-error>
+            </mat-form-field>
+      <div>
+        <input type="reset" class="clear" value="איפוס">
+  
+        <input type="submit" class="submit" (click)="register()" value="אישור">
+      </div>
+    </form>
+  </div>

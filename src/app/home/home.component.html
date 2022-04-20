@@ -1,0 +1,35 @@
+<a href="#" routerLink="/app-addprodact"> <button class="home-btn" style="margin-right: 60px;">הוספת בגד
+        חדש</button></a>
+<router-outlet></router-outlet>
+
+<app-filter (clickFilter)="filtercloth($event)"></app-filter>
+
+
+<!-- <app-cloth [displayclothes]="displayclothes"></app-cloth> -->
+<div class="all-clothe">
+    <div class="wrap-card" *ngFor="let cloth of displayclothes">
+        <p class="mat-card-title">{{cloth.productName}}</p>
+        <!-- *ngIf="addremark"  -->
+        <button class="icon-remark" (click)="update(cloth.productId)">
+
+            <mat-icon class="edit" aria-hidden="false" aria-label="Example home icon">update</mat-icon>
+
+        </button>
+        <mat-card-content class="mat-card-content">
+
+            <mat-card class="example-card">
+
+                <p>
+                    מחיר :{{cloth.price}}
+                </p>
+                <p>
+                    קטגוריה :{{cloth.category}}
+                </p>
+                <p>
+                    במלאי :{{cloth.unitsInStock}}
+                </p>
+            </mat-card>
+        </mat-card-content>
+
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.wrapper{
+    text-align: center;
+    direction: rtl;
+}
+
+.mat-form-field-appearance-fill{
+    text-align: center !important;
+}

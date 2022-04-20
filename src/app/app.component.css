@@ -1,0 +1,28 @@
+.header {
+    background-color: red !important;
+    color: white !important;
+    text-align: center;
+
+}
+.header p a {
+    background-color: red !important;
+    color: white !important;
+
+
+}
+.header .barbtn {
+    background-color: red !important;
+
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+}
+.uu{    text-align: center;
+}
+.pp{
+    text-align: center;
+
+}
+
+

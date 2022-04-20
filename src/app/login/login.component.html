@@ -1,0 +1,19 @@
+<div class="login">
+    <div  class ="example-container">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+              <mat-label> איימל</mat-label>
+              <input matInput placeholder="pat@example.com" name="email" [formControl]="email" required [(ngModel)]="myUser.mail" >
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+        <mat-form-field appearance="fill">
+          <mat-label>   סיסמה</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="myUser.password" name="password" >
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>    
+      </div>
+      <input type="button" name="login" class="login1" (click)=logIn() value="התחברות"/> 
+    </div>

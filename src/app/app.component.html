@@ -1,0 +1,27 @@
+ 
+ <div class="pp">
+ <h1 class="header">
+    <!-- <ul >
+      <mat-icon>home</mat-icon>
+    </ul> -->
+    <p>
+      <a routerLink="/home"> דף הבית</a> 
+    </p>
+     <!-- <ul  *ngIf="!ser.userSignIn">
+      <mat-icon>login</mat-icon>
+    </ul> -->
+      <p *ngIf="!ser.userSignIn">
+        <a  (click)="opendialog()">  התחבר   </a>
+      </p>
+      <!-- <ul *ngIf="ser.userSignIn">
+        <mat-icon>logout</mat-icon>
+      </ul> -->
+      <p *ngIf="ser.userSignIn">
+        <a (click)="logOut()"> יציאה </a>
+      </p>
+      <div style="margin-left: 1300px;" > 
+      <p >שלום {{ser.userName}}</p>
+    </div>
+ </h1>
+<router-outlet></router-outlet> 
+</div>
